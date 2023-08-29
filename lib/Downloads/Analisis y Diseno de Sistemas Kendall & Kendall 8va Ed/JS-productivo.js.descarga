@@ -1,0 +1,1624 @@
+// Consola de accesibilidad//
+  var uaMaxHeight = $(document).height();
+  console.log(uaMaxHeight);
+  $('.uatm1_tipo1 p').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 h2').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 h3').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 h4').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 tr td').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 div ul').addClass('uatm1_tamFuente');
+  $('.uatm1_tipo1 li').addClass('uatm1_tamFuente');
+  $('.uatm1_parrafo').addClass('uatm1_tamFuente');
+  $('.uatm1_lista').addClass('uatm1_tamFuente');
+  var Uadonde = $('.uatm1_tamFuente');
+  var UasizeFuenteOriginal = Uadonde.css('font-size');
+
+  $(".uatm1_normalFont").click(function(){
+    Uadonde.css('font-size', UasizeFuenteOriginal);
+  });
+  $('.uatm1_masFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*1.2;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+
+  $('.uatm1_menosFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*0.8;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+  
+  /*ESTA ES UNA EDICIÃƒâ€œN DE LA AMERICANA PARA TEMPLATE GRADO*/
+   $(".ilmtmUAFAEA_normalFont").click(function(){
+    Uadonde.css('font-size', UasizeFuenteOriginal);
+  });
+  $('.ilmtmUAFAEA_masFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*1.2;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+
+  $('.ilmtmUAFAEA_menosFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*0.8;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+  /*ESTA ES UNA EDICIÃƒâ€œN DE LA AMERICANA*/
+  
+  /*ESTA ES UNA EDICIÃƒâ€œN DE LA AMERICANA PARA TEMPLATE POSGRADO*/
+   $(".medu_normalFont").click(function(){
+    Uadonde.css('font-size', UasizeFuenteOriginal);
+  });
+  $('.medu_masFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*1.2;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+
+  $('.medu_menosFont').click(function(){
+    var UasizeFuenteActual = Uadonde.css('font-size');
+    var UasizeFuenteActualNum = parseFloat(UasizeFuenteActual, 10);
+    var UasizeFuenteNuevo = UasizeFuenteActualNum*0.8;
+    Uadonde.css('font-size', UasizeFuenteNuevo);
+    return false;
+  });
+  /*ESTA ES UNA EDICIÃƒâ€œN DE LA AMERICANA*/
+  
+  $('.btn-mostrar').click(function(){
+    var Uamo = 1;
+    if (Uamo == 1) {
+      $('.uatm1_consola_v').addClass('uatm1_mostrarconsola');
+      Uamo=0;
+    }
+    else{
+      $('.uatm1_consola_v').removeClass('uatm1_mostrarconsola');
+      Uamo=1;
+    }
+  });
+  $('.uatm1_cambio_c').click(function(){
+    var Uatime = 1;
+    if (Uatime == 1) {
+      $('.uatm1_navegacion').addClass('uatm1_cambios');
+      $('.uatm1_menuBar').addClass('uatm1_cambios_b');
+      $('.uatm1_introduccion').addClass('uatm1_cambios_intro');
+      $('.uatm1_seccion1').addClass('uatm1_cambios_sec1');
+      $('.uatm1_seccion2').addClass('uatm1_cambios_sec2');
+      $('.uatm1_seccion3').addClass('uatm1_cambios_sec3');
+      Uatime = 0;
+    }
+    else {
+      Uatime = 1;
+    }
+  });
+
+  $('.uatm1_remover_c').click(function(){
+    var Uapoor = 1;
+    if (Uapoor == 1) {
+      $('.uatm1_navegacion').removeClass('uatm1_cambios');
+      $('.uatm1_menuBar').removeClass('uatm1_cambios_b');
+      $('.uatm1_introduccion').removeClass('uatm1_cambios_intro');
+      $('.uatm1_seccion1').removeClass('uatm1_cambios_sec1');
+      $('.uatm1_seccion2').removeClass('uatm1_cambios_sec2');
+      $('.uatm1_seccion3').removeClass('uatm1_cambios_sec3');
+      Uapoor = 0;
+    }
+    else {
+      Uapoor = 1;
+    }
+});
+// MenÃƒÂº horizontal //
+ var Uacontar = 1;
+
+  $(window).scroll(function(){
+    if( $(this).scrollTop() == $(document).height() - $(window).height()){
+      $('.uatm1_menLect').addClass('uatm1_altmax');
+    }
+    else{
+      $('.uatm1_menLect').removeClass('uatm1_altmax'); 
+    }
+    if( $(this).scrollTop() > 260 ){
+      $('.uatm1_BarraLec').addClass('uatm1_margenDerecha');
+      $('.uatm1_fijo').addClass('uatm1_header2');
+      $('.btn-mostrar').addClass('uatm1_On');
+      $('.btn-mostrar').removeClass('uatm1_Off');
+      $('.uatm1_navegacion').addClass('uatm1_mostrarconsola');
+      $('.uatm1_menuBar').addClass('uatm1_mostrarconsola');
+      $('.uatm1_menLect').addClass('uatm1_menLect2');
+      $('.uatm1_navegacion').addClass('uatm1_margen_bar');
+    } else {
+      $('.uatm1_BarraLec').removeClass('uatm1_margenDerecha');
+      $('.uatm1_fijo').removeClass('uatm1_header2');
+      $('.btn-mostrar').addClass('PxOff');
+      $('.btn-mostrar').removeClass('PxOn');
+      $('.uatm1_menuBar').removeClass('uatm1_mostrarconsola');
+      $('.uatm1_navegacion').removeClass('uatm1_mostrarconsola');
+      $('.uatm1_menLect').removeClass('uatm1_menLect2');
+      $('.uatm1_navegacion').removeClass
+      ('uatm1_margen_bar');
+    }
+  });
+  
+  //MENU HORIZONTAL MODIFICADO AMERICANA
+  
+   var Uacontar = 1;
+
+  $(window).scroll(function(){
+    if( $(this).scrollTop() == $(document).height() - $(window).height()){
+      $('.uatm1_menLect').addClass('uatm1_altmax');
+    }
+    else{
+      $('.uatm1_menLect').removeClass('uatm1_altmax'); 
+    }
+    if( $(this).scrollTop() > 260 ){
+      $('.uatm1_BarraLec').addClass('ilmtmUAFAEA_header1');
+      $('.ilmtmUAFAEA_fijo').addClass('ilmtmUAFAEA_header');
+      $('.btn-mostrar').addClass('uatm1_On');
+      $('.btn-mostrar').removeClass('uatm1_Off');
+      $('.ilmtmUAFAEA_menu').addClass('uatm1_mostrarconsola');
+      $('.uatm1_menuBar').addClass('uatm1_mostrarconsola');
+      $('.uatm1_menLect').addClass('uatm1_menLect2');
+      $('.ilmtmUAFAEA_menu').addClass('uatm1_margen_bar');
+    } else {
+      $('.uatm1_BarraLec').removeClass('ilmtmUAFAEA_header1');
+      $('.ilmtmUAFAEA_fijo').removeClass('ilmtmUAFAEA_header');
+      $('.btn-mostrar').addClass('PxOff');
+      $('.btn-mostrar').removeClass('PxOn');
+      $('.uatm1_menuBar').removeClass('uatm1_mostrarconsola');
+      $('.ilmtmUAFAEA_menu').removeClass('uatm1_mostrarconsola');
+      $('.uatm1_menLect').removeClass('uatm1_menLect2');
+      $('.ilmtmUAFAEA_menu').removeClass
+      ('uatm1_margen_bar');
+    }
+  });
+  
+  
+  $('.uatm1_menuBar').click(function(){
+    if(Uacontar == 1){
+      $('.uatm1_navegacion').addClass('uatm1_displayOn');
+      $('.uatm1_navegacion').removeClass('uatm1_displayOff');
+      Uacontar = 0;
+    }
+    else {
+      $('.uatm1_navegacion').addClass('uatm1_displayOff');
+      $('.uatm1_navegacion').removeClass('uatm1_displayOn');
+      Uacontar = 1;
+    }
+  });
+
+  $('.uatm1_lista').click(function(){
+    if(Uacontar == 1){
+      $('.uatm1_navegacion').addClass('uatm1_displayOn');
+      $('.uatm1_navegacion').removeClass('uatm1_displayOff');
+      Uacontar = 0;
+    }
+    else {
+      $('.uatm1_navegacion').addClass('uatm1_displayOff');
+      $('.uatm1_navegacion').removeClass('uatm1_displayOn');
+      Uacontar = 1;
+    }
+  });  
+  
+  function importarJavascript(nombre){
+
+        $.getScript(nombre,function(){
+         console.log("Js "+nombre+" cargado");
+     });
+}
+importarJavascript("https://canvas-rsc.ilumno.com/ua/prod/js/menu_fijo_Ua.js");
+importarJavascript("https://cdn.agentbot.net/core/2247157e045e1ac8edc4658386699e01.js");
+
+/************************************************** 
+  AGREGADO DE LINKS CUSTOM
+***************************************************/
+/* Ejemplo para inhibir todos los puntos de ayuda */
+$('.ic-app-header__secondary-navigation a#global_nav_help_link').click(function(){     
+  //working as of 08/19/2016     
+  function onElementRendered(selector, cb, _attempts) {       
+    var el = $(selector);       
+    _attempts = ++_attempts || 1;       
+    
+    if (el.length) return cb(el);       
+    if (_attempts == 60) return;       
+    
+    setTimeout(function() {         
+      onElementRendered(selector, cb, _attempts);       
+    }, 250);     
+  };     
+  
+  onElementRendered('#help_tray', function(e) {       
+    // if there is the role of student or user and no presence of teacher or admin, hide links         
+    // if (ENV.current_user_roles.indexOf('student') > 0 || ENV.current_user_roles.indexOf('user') > 0 && 
+    //  !(ENV.current_user_roles.indexOf('admin') < 0 || ENV.current_user_roles.indexOf('teacher') < 0)) {           
+      
+      $('.ic-NavMenu-list-item a[href="#create_ticket"]').parent().hide();  
+      $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/ideas/feature-ideas"]').parent().hide();  
+          $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/answers/guides/"]').parent().hide();
+            $('.ic-NavMenu-list-item a[href="http://apis.ilumno.com/faqs/v1.0/portal?source=ues"]').parent().hide();
+            $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/answers"]').parent().hide();     
+    // }         
+    // else {           
+    //  console.log('else statement');         
+    // }     
+  });   
+});
+
+$('#footer-links').html(
+  '<a target="_blank" href="http://twitter.com/uamericana" class="external">' +
+    '<span>Twitter</span>' +
+    '<span class="ui-icon ui-icon-extlink ui-icon-inline" title="Enlace a sitio externo."></span>' +
+  '</a>' +
+  '<a target="_blank" href="https://www.facebook.com/uamericana" class="external">' +
+    '<span>Facebook</span>' +
+    '<span class="ui-icon ui-icon-extlink ui-icon-inline" title="Enlace a sitio externo."></span>' +
+  '</a>');
+  
+$('.ic-Login-footer__links a').show();
+$('.ic-app-footer__links a').show();
+
+
+//Hasta aquÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â­ el original
+
+$('.hide_file_preview_link + iframe').addClass('ilmtm2_tamano_pdf');
+//modal:V
+  $('#ilmtm2_boton_cerrar').click(function(){
+      $('.ilmtm2_modal').css({'visibility': 'hidden','opacity': '0'});
+    $('#ilmtm2_boton_cerrar').css({'visibility': 'hidden','opacity': '0'});
+    });
+  $('.ilmtm2_abrirmodal').click(function(e){
+    e.preventDefault();
+    var objetivo = $(this).attr('href');
+    $(objetivo+'>.ilmtm2_modal').css({'visibility': 'visible','opacity': '1'});
+    $('#ilmtm2_boton_cerrar').css({'visibility': 'visible','opacity': '1'});
+  });
+//
+$( ".ilmtm2_esconder a" ).click(function (e) {
+  if ( $( ".ilmtm2_menuIntro ul" ).is( ":hidden" ) ) {
+    $(".ilmtm2_menuIntro").css({'height':'100%'});
+    $(".ilmtm2_menuIntro ul" ).animate({"opacity":"1"}, 10);
+    $(".ilmtm2_menuIntro ul" ).slideDown( "slow" );
+  } else {
+    $(".ilmtm2_menuIntro ul" ).animate({"opacity":"0"}, 10);
+    $(".ilmtm2_menuIntro ul" ).hide("slow");
+    $(".ilmtm2_menuIntro").animate({ "height": "0px", "text-align": "right"}, "slow" );
+  }
+  e.preventDefault();
+});
+$( ".ilmtm2_esconder2 a" ).click(function (e) {
+  if ( $( ".ilmtm2_menuIntro2 ul" ).is( ":hidden" ) ) {
+    $(".ilmtm2_menuIntro2").css({'height':'100%'});
+    $(".ilmtm2_menuIntro2 ul" ).animate({"opacity":"1"},100);
+    $(".ilmtm2_menuIntro2 ul" ).slideDown( "slow" );
+  } else {
+    $(".ilmtm2_menuIntro2 ul" ).animate({"opacity":"0"},100);
+    $(".ilmtm2_menuIntro2 ul" ).hide("slow");
+    $(".ilmtm2_menuIntro2").animate({ "height": "0px", "text-align": "right" }, "slow" );
+    
+  }
+  e.preventDefault();
+});
+
+  $(window).resize(function(){
+        var ventana_ancho = $(window).width();
+    if( ventana_ancho > 800){
+      $('.ilmtm2_menuIntro ul').css({
+        'display':'block','opacity':'1'
+      })
+      $('.ilmtm2_menuIntro').css({
+        'height':'35px'
+      });
+    }
+    else{
+      $('.ilmtm2_menuIntro ul').css({
+        'display': 'none'
+      })
+      $('.ilmtm2_menuIntro').css({
+        'height':'0px'
+      });
+      
+    }
+    });
+/////ACCORDION
+   /*function close_accordion_section() {
+        $('.ilmtmA_acordeon .ilmtmA_accordion-section-title').removeClass('ilmtmA_active');
+        $('.ilmtmA_acordeon .ilmtmA_accordion-section-content').slideUp(600).removeClass('open');
+    }*/
+    $('.ilmtmA_accordion-section-title').click(function(e) {
+        var ilmtmcurrentAttrValue = $(this).attr('href');
+        if($(e.target).is('.ilmtmA_active')) {
+            $('.ilmtmA_acordeon .ilmtmA_accordion-section-title').removeClass('ilmtmA_active');
+            $('.ilmtmA_acordeon .ilmtmA_accordion-section-content').slideUp(600).removeClass('open');
+            //close_accordion_section();
+        }else {
+            //close_accordion_section();
+            $('.ilmtmA_acordeon .ilmtmA_accordion-section-title').removeClass('ilmtmA_active');
+            $('.ilmtmA_acordeon .ilmtmA_accordion-section-content').slideUp(600).removeClass('open');
+            $(this).addClass('ilmtmA_active');
+            $('.ilmtmA_acordeon ' + ilmtmcurrentAttrValue).slideDown(800).addClass('open'); 
+        }
+        e.preventDefault();
+    });
+
+///tabashover
+
+$('.ilmtm2_tabs_img a').click(function(e){
+    var mitab = $(this).attr('href');
+    e.preventDefault(); 
+    $('.ilmtm2_tabs_contenido div').removeClass('ilmtm2_hover_activo');
+    $(mitab).addClass('ilmtm2_hover_activo');
+    
+});
+
+$('.ilmtm2_tabs_img2 a').click(function(e){
+    var mitab = $(this).attr('href');
+    e.preventDefault();  
+    $('.ilmtm2_tabs_contenido2 div').removeClass('ilmtm2_hover_activo');
+    $(mitab).addClass('ilmtm2_hover_activo');
+    
+});
+
+///Tabs
+$('.ilmtm_MyTabs>h3>a').click(function(e){   
+        var direccion = $(this).attr('href');
+        if($(e.target).is('.ilmtm_active')){
+            }
+        else{
+            $('.ilmtm_tab-pane').removeClass('ilmtm_active');
+            $('.ilmtm_MyTabs>h3>a').removeClass('ilmtm_active');
+            $('.ilmtm_MyTabs').removeClass('ilmtm_li_activo');
+            $('li'+direccion).addClass('ilmtm_li_activo');
+            $('.ilmtm_MyTabs>h3>a[href^="'+direccion+'"]').addClass('ilmtm_active');
+            $('.ilmtm_tab-content ' + direccion).addClass('ilmtm_active');
+        }
+        e.preventDefault();
+    });
+
+//almacenar slider en una variable
+var slider = $('#ilmtm_slider');
+var slider2 = $('#ilmtm_slider2');
+//almacenar botones
+var siguiente = $('#ilmtm_btn-next');
+var anterior = $('#ilmtm_btn-prev');
+
+//mover ultima imagen al primer lugar
+$('#ilmtm_slider .ilmtm_slider__section:last').insertBefore('#ilmtm_slider .ilmtm_slider__section:first');
+$('#ilmtm_slider2 .ilmtm_slider__section2:last').insertBefore('#ilmtm_slider2 .ilmtm_slider__section2:first');
+//mostrar la primera imagen con un margen de -100%
+slider.css('margin-left', '-'+100+'%');
+slider2.css('margin-left', '-'+100+'%');
+
+function moverD() {
+  slider.animate({
+    marginLeft:'-'+200+'%'
+  } ,1000, function(){
+    $('#ilmtm_slider .ilmtm_slider__section:first').insertAfter('#ilmtm_slider .ilmtm_slider__section:last');
+    slider.css('margin-left', '-'+100+'%');
+  });
+  slider2.animate({
+    marginLeft:'-'+200+'%'
+  } ,1000, function(){
+    $('#ilmtm_slider2 .ilmtm_slider__section2:first').insertAfter('#ilmtm_slider2 .ilmtm_slider__section2:last');
+    slider2.css('margin-left', '-'+100+'%');
+  });
+}
+
+function moverI() {
+  slider.animate({
+    marginLeft:0
+  } ,1000, function(){
+    $('#ilmtm_slider .ilmtm_slider__section:last').insertBefore('#ilmtm_slider .ilmtm_slider__section:first');
+    slider.css('margin-left', '-'+100+'%');
+  });
+  slider2.animate({
+    marginLeft:0
+  } ,1000, function(){
+    $('#ilmtm_slider2 .ilmtm_slider__section2:last').insertBefore('#ilmtm_slider2 .ilmtm_slider__section2:first');
+    slider2.css('margin-left', '-'+100+'%');
+  });
+}
+function autoplay() {
+  interval = setInterval(function(){
+    moverD();
+  }, 10000);
+}
+$('#ilmtm_btn-next2').click(function() {
+  moverD();
+});
+
+$('#ilmtm_btn-prev2').click(function() {
+  moverI();
+});
+$('#ilmtm_btn-next').click(function() {
+  moverD();
+});
+
+$('#ilmtm_btn-prev').click(function() {
+  moverI();
+});
+
+/*Acordion Americana*/
+$(".aaccordion-titulo").click(function(){
+    
+   var contenido=$(this).next(".aaccordion-content");
+      
+   if(contenido.css("display")=="none"){ //open   
+      contenido.slideDown(250);     
+      $(this).addClass("open");
+   }
+   else{ //close    
+      contenido.slideUp(250);
+      $(this).removeClass("open");  
+  }
+              
+});
+
+$(".strategy_aaccordion-titulo").click(function(){
+    
+   var contenido=$(this).next(".aaccordion-content");
+      
+   if(contenido.css("display")=="none"){ //open   
+      contenido.slideDown(250);     
+      $(this).addClass("open");
+   }
+   else{ //close    
+      contenido.slideUp(250);
+      $(this).removeClass("open");  
+  }
+              
+});
+/*Acordion Americana*/
+
+
+/*Acordion Americana*/
+$(".made_aaccordion-titulo").click(function(){
+    
+   var contenido=$(this).next(".aaccordion-content");
+      
+   if(contenido.css("display")=="none"){ //open   
+      contenido.slideDown(250);     
+      $(this).addClass("open");
+   }
+   else{ //close    
+      contenido.slideUp(250);
+      $(this).removeClass("open");  
+  }
+              
+});
+/*Acordion Americana*/
+
+
+/*Ventana emergente Americana*/
+$(document).ready(function(){
+  
+  // check the cookie
+  if( !$.cookie('showPopup') ){
+    $("#ilmtmUA_hover").hide();
+    $("#ilmtmUA_popup").hide();
+  };
+  
+  // close on click to the black area
+  $("#ilmtmUA_hover").click(function(){
+    $(this).fadeOut();
+    $("#ilmtmUA_popup").fadeOut();
+  });
+  
+  // close on click to X
+  $("#ilmtmUA_close").click(function(){
+    $("#ilmtmUA_hover").fadeOut();
+    $("#ilmtmUA_popup").fadeOut();
+    
+    // set the cookie
+    $.cookie('showPopup', 'false', { expires: 7 });
+  });
+  
+});
+/*Ventana emergente Americana*/
+
+/*Tab horizontal Americana*/
+function openCity(evt, cityName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("ilmtmUAFAEA_tabcontent");   
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = " none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+/*Tab horizontal Americana*/
+
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/acordeon.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/canvas_profile_badges.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_avon.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_CEPAS.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_LIGA.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/TELECOM.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_CNH.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_FEHGRA.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_FIAT.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_WESTERN.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_MACRO.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_ALICAN.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/JS_SUPERCANAL.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/js_canvas20.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/programa2.0estilo.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/js_tfg_modulos.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/pag_inicio.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/eligetuaventura_script.js");
+//importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/eligetuaventura_scriptmobile.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/script-bandersmacro.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/programagenerico.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/cierregire.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/Programa.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/genericoscript.js");
+
+
+
+/* lo que sigue es para el aula abierta de la materia 2.0 */
+$(".bntMenu").attr("style","width:40px !important;margin-top:-40px!important;background-image: url(https://canvas-rsc.ilumno.com/siglo21/test/img/aula-abierta/imenu3.png) !important;height:40px !important;background-repeat: no-repeat !important;background-position: center !important")
+$(".btnsMods").attr("style","height:35% !important; right:-1200px!important;width:100% !important; ")
+
+$("#wiki_page_show .page-title").hide()
+$(document).ready(function(){ $("#master-modal").css({ "width":"80%", "left":"10%" }) });
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/acordeon.js");
+importarJavascript("https://canvas-rsc.ilumno.com/siglo21/prod/js/canvas_profile_badges.js");
+
+var w = $(window).width(); if (w < 600) {     var style_ = `         <style>         .btnsMods{ width:90% !important; height: 100px!important; background-color:#fff!important; }          </style>`;     $("body").append(style_); }
+
+var style=`<style>
+.btnsMods{
+width:100% !important;
+background-color:#fff!important;
+height: 300px!important;
+}
+
+}
+.btnMenu{
+width:40px !important;
+background:#672A80;
+width:50px !important;
+height:30px !important;
+right: -740px !important;
+}
+.bntMenu {
+    background-image: url(https://canvas-rsc.ilumno.com/siglo21/test/img/aula-abierta/imenu3.png) !important;
+    width: 32px;
+    height: 16px;
+    margin: 0px 0px 0px 0px;
+    float: right !important;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: -20px !important;
+}
+
+
+
+</style>`
+$("body").append(style);
+
+
+/* <script type="application/javascript" src="https://cdn.agentbot.net/core/ad709055c9d332dce42967fefa9f3f62.js" async></script>*/
+/*
+$('#footer-links').html(
+    '<a target="_blank" href="http://www.21.edu.ar/" class="external">' +
+    '<span>Siglo 21</span>' +
+    '<span class="ui-icon ui-icon-extlink ui-icon-inline" title="Enlace a sitio externo."></span>' +
+    '</a>' +
+    '<a target="_blank" href="http://ues21.socialgateway.net/webchat/alumnos/ping?style=ues21classic&tag=Proyecto%20Canvas" class="external">' +
+    '<span>Ayuda</span>' +
+    '<span class="ui-icon ui-icon-extlink ui-icon-inline" title="Enlace a sitio externo."></span>' +
+    '</a>');
+*/
+$('.ic-app-footer__links a').show();
+
+/* Ejemplo para inhibir todos los puntos de ayuda */
+$('.ic-app-header__secondary-navigation a#global_nav_help_link').click(function () {
+    //working as of 08/19/2016
+    function onElementRendered(selector, cb, _attempts) {
+        var el = $(selector);
+        _attempts = ++_attempts || 1;
+
+        if (el.length) return cb(el);
+        if (_attempts == 60) return;
+
+        setTimeout(function () {
+            onElementRendered(selector, cb, _attempts);
+        }, 250);
+    };
+
+    onElementRendered('#help_tray', function (e) {
+        // if there is the role of student or user and no presence of teacher or admin, hide links
+        // if (ENV.current_user_roles.indexOf('student') > 0 || ENV.current_user_roles.indexOf('user') > 0 &&
+        //  !(ENV.current_user_roles.indexOf('admin') < 0 || ENV.current_user_roles.indexOf('teacher') < 0)) {
+
+        $('.ic-NavMenu-list-item a[href="#create_ticket"]').parent().hide();
+        $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/ideas/feature-ideas"]').parent().hide();
+        $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/answers/guides/"]').parent().hide();
+        $('.ic-NavMenu-list-item a[href="http://apis.ilumno.com/faqs/v1.0/portal?source=ues"]').parent().hide();
+        $('.ic-NavMenu-list-item a[href="https://community.canvaslms.com/community/answers"]').parent().hide();
+        // }
+        // else {
+        //  console.log('else statement');
+        // }
+    });
+});
+/*
+if ((ENV['current_user'].id < 1000000000) || (ENV['current_user'].id == 46480000000001060) || (ENV['current_user'].id == 46480000000000013)) {
+    ! function (b) {
+        var g = "$aivo",
+            h = !!window.$aivo && window.$aivo;
+        b[g] = b[g] || {
+            next: null,
+            init: function (j) {
+                var m, p = document.getElementsByTagName("head")[0],
+                    q = document.createElement("script"),
+                    u = "_agentCoreScript",
+                    w = window;
+                q.onload = q.onerror = q.onreadystatechange = function () {
+                    if (!(q.readyState && !/^c|loade/.test(q.readyState) || m)) {
+                        if (q.onload = q.onreadystatechange = null, m = 1, h = w[g], h) w[g] = h;
+                        else try {
+                            delete w[g]
+                        } catch (x) {
+                            w[g] = void 0
+                        }
+                        b[g] = h, setTimeout(function () {
+                            $aivo.run(j, $aivo.__next)
+                        }, 1)
+                    }
+                }, document.getElementById(u) && document.getElementById(u).parentNode.removeChild(document.getElementById(u)), q.async = 1, q.id = u, q.src = "https://cdn.agentbot.net/core/latest/core.js", q.charset = "UTF-8", p.parentNode.insertBefore(q, p)
+            },
+            ready: function (j) {
+                $aivo.__next = j
+            }
+        }
+    }(this);
+    $aivo.init("ad709055c9d332dce42967fefa9f3f62");
+    $aivo.ready(function () {
+        $aivo.user.set('name', ENV['current_user'].display_name);
+        $aivo.user.set('email', ENV['current_user'].id);
+    });
+}
+*/
+// Actualizacion dinamica de los enlaces al sitio de realidad virtual
+function redirectHREF() {
+    try {
+        var
+        envUserId = ENV['current_user'].id,
+        envUserName = ENV['current_user'].display_name,
+        envCourseId = ENV['COURSE_ID'],
+        envCourseName = ENV['ROOT_OUTCOME_GROUP'].title,
+        envAssignmentId = ENV['ASSIGNMENT_ID'],
+        urlRV1 = $("#boton1").parents("a").attr("href"),
+        urlRV2 = $("#boton2").parents("a").attr("href"),
+        paramRV1 = "&user_id=@user_id&course_id=@course_id&assignment_id=@assignment_id&user_fullname=@user_name&course_name=@course_name";
+        paramRV2 = "?user_id=@user_id&course_id=@course_id&assignment_id=@assignment_id";
+
+        if(envAssignmentId != null){
+            paramRV1 = paramRV1.replace("@user_id",envUserId);
+            paramRV1 = paramRV1.replace("@course_id",envCourseId);
+            paramRV1 = paramRV1.replace("@assignment_id",envAssignmentId);
+            paramRV1 = paramRV1.replace("@user_name",encodeURI(envUserName));
+            paramRV1 = paramRV1.replace("@course_name",encodeURI(envCourseName));
+            $("#boton1").parents("a").attr("href", urlRV1+paramRV1);
+
+            paramRV2 = paramRV2.replace("@user_id",envUserId);
+            paramRV2 = paramRV2.replace("@course_id",envCourseId);
+            paramRV2 = paramRV2.replace("@assignment_id",envAssignmentId);
+            $("#boton2").parents("a").attr("href", urlRV2+paramRV2);
+        }
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+redirectHREF();
+
+
+function inCourse() {
+    let courseId = null;
+    try {
+        var root = window.location.href;
+        /**
+         * dividimos la url por la palabra curso
+         */
+        var uri = root.split("/courses/");
+
+        if (uri.length > 1) {
+            //
+            //courseId = uri[1].split("/")[0];
+            /**
+             * obtenemos el id del curso desde la variable ENV
+             */
+            if (ENV != null && ENV.COURSE_ID) {
+                courseId = ENV.COURSE_ID;
+            }
+            /**
+             * si no exite la variable (foros) se toma
+             * la url del navegador
+             */
+            if (courseId == null) {
+                courseId = uri[1].split("/")[0];
+            }
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+    return courseId;
+}
+
+function removeCloneContentExternal(callBack, src = null) {
+    try {
+        const isCanvas = new RegExp("instructure.com");
+        if (!isCanvas.test(src)) {
+            callBack();
+            return false;
+        }
+        let ifr = $("#MainPopupIframe").contents();
+        const discussions_ = ifr.find(".side_comment_discussion").length;
+        const groups_ = ifr.find(".section a[href*=groups]").length;
+        const $iframes = ifr.find("iframe");
+        $iframes.css({
+            "width": "100%",
+            "height": "90vh"
+        });
+
+        if (groups_ > 0) {
+            ifr.find("#courseMenuToggle").trigger("click");
+        } else {
+            ifr.find("#wrapper").css({
+                "margin-left": "0",
+                "max-width": "initial"
+            });
+            ifr.find("#main").css("margin-left", "0px");
+            ifr.find("#left-side").hide();
+        }
+        /**
+         * ocultamos el menu
+         */
+
+        ifr
+            .find(
+                "#header,.header-bar-outer-container,.page-title,.ic-app-nav-toggle-and-crumbs"
+            )
+            .hide();
+        /**
+         * ocultamos los botones de la parte inferior de la navegaciÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬ ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¾Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¾ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬ ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬ ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³n
+         */
+        ifr.find(".module-sequence-footer").remove();
+        /**
+         * enviamos a 0 la altura del popup
+         */
+        $("#MainPopupIframe").css("height", "90vh");
+        var sizer = ifr.find("#application").css("height");
+        if (sizer > 0) {
+            $("#MainPopupIframe").css("height", sizer);
+        }
+        ifr.find("#application").css({
+            height: "100px",
+            overflow: "auto",
+            "min-height": sizer + "px"
+        });
+
+
+        if (ifr.find("#wiki_page_show").length < 1) {
+            ifr.find("#wrapper").css({
+                "padding": "20px"
+            });
+        }
+        var auto =0;
+        var refreshIntervalId = setInterval(function(){
+            auto++;
+            $("#MainPopupIframe")
+            .contents()
+            .find("#aivochat-launcher")
+            .hide();
+            if(auto==10){
+                clearInterval(refreshIntervalId);
+            }
+        }, 1000);
+
+        callBack();
+    } catch (error) {
+        doCatch(error);
+    }
+}
+
+
+function isScormInsideOfIframe() {
+    let response = false;
+    try {
+        const $mainPopupIframe = $("#MainPopupIframe");
+        if ($mainPopupIframe != null && $mainPopupIframe.length > 0) {
+            let ifr = $mainPopupIframe.contents();
+            if (ifr.find("form :first-child").length > 0) {
+                let action = ifr.find("form").attr("action");
+                if (action != null && action.length > 0) {
+                    if (/scone-prod/.test(action)) {
+                        response = true;
+                    }
+                }
+            }
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+    return response;
+}
+
+/**
+ * funcion que se encarga de validar que un scorm se encuentre dentro del iframe.
+ */
+function actionWhenScorm() {
+    try {
+        if (isScormInsideOfIframe()) {
+            let ifr = $("#MainPopupIframe").contents();
+            /* $(".MainPopupIframeClass").removeAttr("id")
+                  $(".MainPopupIframeClass").contents().find("iframe").attr("id","MainPopupIframe"); */
+            ifr.find(".assignment-title,#right-side-wrapper").hide();
+            ifr.find("#application").css("overflow", "hidden");
+            ifr.find("#content").css("padding", "0px");
+            console.log('#########################----------scorm-----##########################');
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+}
+
+var firefoxReload = 0;
+/**
+ * funcion que se encarga de recargar el iframe cuando el navegador es firefox, debido a que tiene un bug que no carga el modal como en chrome o mozilla
+ */
+function reloadIfFirefox() {
+    if (firefoxReload > 0) {
+        return false;
+    }
+    if (isScormInsideOfIframe()) {
+        return false;
+    }
+    setTimeout(() => {
+        var isChrome =
+            /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+        var isFirefox = navigator.userAgent.toLowerCase().indexOf("firefox") > -1;
+        if (isChrome) { } else if (isFirefox) {
+            $("#MainPopupIframe").attr("src", $("#MainPopupIframe").attr("src"));
+            firefoxReload++;
+        } else { }
+    }, 2000);
+}
+
+var calendarReload = 0;
+/**
+ * la carga en el popup del calendario de canvas
+ */
+function reloadIfCalendar() {
+    try {
+        if (calendarReload > 0) {
+            return false;
+        }
+        //const iframeUri=$("#MainPopupIframe").attr("src");
+        const $mainPopupIframe = $("#MainPopupIframe");
+        const regExpCalendar = /.com\/calendar/;
+        if (regExpCalendar.test($mainPopupIframe.attr("src"))) {
+            $mainPopupIframe
+                .attr("src", $mainPopupIframe
+                    .attr("src")
+                );
+            calendarReload++;
+        }
+    }
+    catch (error) {
+        doCatch(error);
+    }
+
+}
+
+/**
+ * esta funcion se encarga de abrir el modal
+ */
+function openModal(contentx = null) {
+    if (contentx != null && contentx != "") {
+        $(".thirdWhite")
+            .fadeIn()
+            .html(contentx);
+    }
+    $(".blackx,.whitex,.backdrop").fadeIn();
+
+    $("body").addClass("hide-overflow");
+}
+
+
+/**
+ * esta funcion se encarga de cerrar el modal
+ */
+function closeModal() {
+    try {
+        if (previsualice != null && previsualice != true) {
+            $(".thirdWhite")
+                .fadeOut()
+                .html("");
+        }
+    }
+    catch (error) {
+        doCatch(error);
+    } finally {
+        $(".blackx,.whitex,.backdrop").fadeOut();
+        $("body").removeClass("hide-overflow");
+        firefoxReload = 0;
+    }
+}
+
+/**
+ * metodo que se encarga de revisar que el usuario logueado tiene rol tutor, no tiene en cuenta si
+ * es administrador, unicamente tutores reales
+ */
+function isOnlyTutor() {
+    var response = false;
+    try {
+        const hasTutorRol = ENV.current_user_roles.indexOf("teacher");
+        const hasUserRol = ENV.current_user_roles.indexOf("user");
+        const hasAdminRol = ENV.current_user_roles.indexOf("admin");
+        const hasStudentRol = ENV.current_user_roles.indexOf("student");
+        if (
+            hasUserRol >= 0 && //si tiene rol usuario y
+            hasTutorRol >= 0  //si tiene rol tutor
+        ) {
+            if (
+                (
+                    hasAdminRol < 0 /* &&
+                    hasStudentRol < 0 */
+                )
+            ) {
+                response = true;
+            }
+        }
+    }
+    catch (error) {
+        doCatch(error);
+    }
+    return response;
+}
+
+/**
+ * metodo que controla que la pagina actual pertenezca a un curso
+ */
+function isInCourse() {
+    let response = false;
+    try {
+        if (/courses\/\d/.test(window.location.href)) {
+            response = true;
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+    return response;
+}
+
+function showMainPopupIframe() {
+    $("#MainPopupIframe").fadeIn();
+}
+
+/**
+ * metodo que permite crear un iframe usando jquery
+
+ */
+function createIframeJquery(href) {
+    let response = {};
+    try {
+        response = $('<iframe/>', {
+            id: 'MainPopupIframe',
+            class: 'MainPopupIframeClass',
+            src: href,
+            style: 'display:none;width:100%; border:none;height:90vh',
+            scrolling: 'no',
+            load: function () {
+                try {
+                    removeCloneContentExternal(function () {
+                        actionWhenScorm();
+                        $('.secondWhite').fadeOut();
+                        $('.thirdWhite').fadeIn();
+                    }, href);
+                    reloadIfFirefox();
+                    reloadIfCalendar();
+                    showMainPopupIframe();
+                } catch (error) {
+                    doCatch(error);
+                }
+            },
+        });
+    }
+    catch (error) {
+        doCatch(error);
+    }
+    return response;
+}
+
+/**
+ *  retorno de pagina cargada dentro de un iframe
+ */
+function inIframe() {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+
+/**
+ * funcion que retorna el modal
+ * */
+function modal() {
+    return `
+            <div class='blackx'>
+                <div id='master-modal' class='whitex overflow white-responsive'>
+                    <button type='button' class='close' data-dismiss='modal'>Cerrar</button>
+                    <a href="#">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAWCAYAAADEtGw7AAAAZElEQVR42mNgoCnQ8JMD4ggcWIZ89RCB/zhwCBaDiVRPJ4N7wJIILI3FYBk0Nf3EGBxCRhxFDB+DZfCGKWGDKdM/CqhWVshQT/9oBsEh0U9GeTxxQItNqhqMXr6SWh6H0K2sAAAMi8oxynPzgwAAAABJRU5ErkJggg==" style="position:relative;display:block;right:0;margin: 0px 5px;margin-top: 5px;width:20px" id="full" />
+                        </a>
+                    <div class='secondWhite'><img src='https://canvas-rsc.ilumno.com/testilumno/prod/js/repositorio/js/components/img/loading.gif' /></div>
+                    <div class='thirdWhite' id='thirdWhite' style='display:none'></div>
+                </div>
+            </div>
+            <div class='backdrop'></div>`;
+}
+
+
+function doCatch(message) {
+    console.log(message);
+}
+
+/**
+ * metodo que valida que el usuario logueado sea un estudiante
+ */
+function isStudent() {
+    var response = false;
+    if (
+        ENV.current_user_roles.indexOf("student") > 0 ||
+        (ENV.current_user_roles.indexOf("user") > 0 &&
+            !(
+                ENV.current_user_roles.indexOf("admin") < 0 ||
+                ENV.current_user_roles.indexOf("teacher") < 0
+            ))
+    ) {
+        response = true;
+    }
+    return response;
+}
+
+/**
+ * funcion que se encarga de tomar todo el ancho dela pantalla en canvas.
+ */
+function wrapperFull() {
+    var css = `<style>
+                            body:not(.full-width):not(.outcomes) .ic-Layout-wrapper {
+                                max-width: initial !important;
+                            }
+                        </style>`;
+    $("head").append(css);
+}
+
+/**
+ * metodo que se encarga de eliminar el boton de restablecer el curso cuando se trata de un rol tutor
+ */
+function removeRebuildCourseTutor() {
+    try {
+        if (
+            ENV.current_user_roles.indexOf("teacher") > 0 ||
+            (ENV.current_user_roles.indexOf("teacher") > 0 &&
+                !(ENV.current_user_roles.indexOf("admin") < 0))
+        ) {
+            $(".reset_course_content_button").remove();
+        }
+    } catch (error) { }
+}
+
+/**
+ * quitar restablecer curso
+ */
+function removeRebuildCourse() {
+    try {
+        $(".reset_course_content_button").remove();
+
+    } catch (error) { }
+}
+
+/**
+ * enviar el mensaje dentro canvas
+ * al asistente de profesor.
+ */
+function hideMessageToTeacherAssistance() {
+    try {
+        if (isStudent()) {
+            const style = `
+            <style>
+                li[data-id*="tas"] {
+                    display: none;
+                }
+            </style>
+            `;
+            $("head").append(style)
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+}
+/**
+ * Pagina de inicio
+ * cuando el usuario tiene rol tutor.
+ */
+function removeInitialPage() {
+    try {
+        const i = isInCourse();
+        if (isOnlyTutor() && i != null & i) {
+            $(".choose_home_page_link").remove();
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+}
+
+/**
+ * metodo de chat
+ * de siglo cuando esta logueado un estudiante y cuando
+ * la pagina se carga mediante lightbox.
+ */
+function hideStudentHelper() {
+     setTimeout(() => {
+        try {
+            console.log('#########################---------executing-------##########################');
+             if (inIframe()) {
+                console.log('#########################---------hiding teach 21-------##########################');
+                 console.log($("#MainPopupIframe").contents().find("head"));
+                console.log($("#MainPopupIframe").contents().find("#AgentAppContainer"));
+                 $("#MainPopupIframe")
+                     .contents()
+                     .find("#aivochat-launcher")
+                    .hide()
+                $("#aivochat-launcher").hide();
+             }
+         }
+         catch (error) {
+             doCatch(error);
+        }
+     }, 1000);
+}
+
+/**
+ * metodo que se encarga de agregar un mensaje personalizado cuando se presenta un error
+ * @param {element} $(".submit_error_link.discussion-topic") elemento que representa el boton de abrir el formulario de soporte canvas
+ */
+function error404() {
+    $(document).ready(function () {
+        var links = $(".icon-discussion.submit_error_link.discussion-topic");
+        if (links.length > 0) {
+            links.remove();
+            var customErrorMessage = `
+            <div>
+                <h1></h1>
+            </div>
+            `;
+            $("#submit_error_form").before(customErrorMessage);
+            $("#submit_error_form").remove();
+        }
+    });
+}
+
+/**
+ * Metodo que permite ocultar el titulo del curso si se encuentra la clase .studentTitleHide
+ */
+function checkIfStudentTitle() {
+    const $requestWrapperFull = $(".studentTitleHide");
+    try {
+        if ($requestWrapperFull.length > 0 && isStudent()) {
+            $(".header-bar-outer-container").remove();
+        }
+    }
+    catch (error) {
+        doCatch(error);
+    }
+}
+
+/**
+ * menu lateral en mobile
+ */
+function modalStyles() {
+    return `<style>
+    .blackx {
+        display: none;
+        overflow: auto;
+        position: fixed;
+        opacity: 1;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 9998;
+    }
+
+    .white-answer,
+    .whitex {
+        text-align: center;
+        display: none;
+        background: #f5f5f5;
+        position: relative;
+        top: 5px;
+        left: 10%;
+        width: 80%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 9999;
+        transition: .5s;
+        -webkit-transition: .5s;
+        min-height: 20px;
+        padding: 0px;
+        margin-bottom: 5px;
+        border: 0px solid #e3e3e3;
+        border-radius: 4px;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05)
+    }
+
+    .whitex .close {
+        background: #182B51;
+        color: white;
+        padding: 0px 5px;
+        margin: 5px;
+        border-radius: 22px;
+        position: relative;
+        right: 0%;
+        display: block;
+        /* float: right; */
+    }
+
+    #full {
+        float: left;
+        margin: 0px 5px;
+        margin-top: 5px;
+    }
+
+    .thirdWhite {
+        /* line-height: 0; */
+    }
+
+    .backdrop {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: black;
+        display: none;
+        opacity: .5;
+        z-index: 999;
+    }
+
+    .historyBack {
+        cursor: pointer;
+    }
+
+    .btnsMods {
+        width: 100% !important;
+        background-color: #fff !important;
+        height: 300px !important;
+    }
+
+    div.col div.bntMenu {
+        display: none;
+    }
+
+    /*  COLUMN SETUP  */
+    .col {
+        display: block;
+        float: left;
+        /*margin: 1% 0 1% 1.6%;*/
+    }
+
+    .col:first-child {
+        margin-left: 0;
+    }
+
+    /*  GROUPING  */
+    .group:before,
+    .group:after {
+        content: "";
+        display: table;
+    }
+
+    .group:after {
+        clear: both;
+    }
+
+    .group {
+        zoom: 1;
+        /* For IE 6/7 */
+    }
+
+    /*  GRID OF EIGHT  */
+    .span_8_of_8 {
+        width: 100%;
+    }
+
+    .span_7_of_8 {
+        width: 87.5%;
+    }
+
+    .span_6_of_8 {
+        width: 75%;
+    }
+
+    .span_5_of_8 {
+        width: 62.5%;
+    }
+
+    .span_4_of_8 {
+        width: 50%;
+    }
+
+    .span_3_of_8 {
+        width: 37.5%;
+    }
+
+    .span_2_of_8 {
+        width: 25%;
+    }
+
+    .span_1_of_8 {
+        width: 12.5%;
+    }
+
+    .span_12_of_12 {
+        width: 100%;
+    }
+
+    .span_11_of_12 {
+        width: 91.66%;
+    }
+
+    .span_10_of_12 {
+        width: 83.33%;
+    }
+
+    .span_9_of_12 {
+        width: 75%;
+    }
+
+    .span_8_of_12 {
+        width: 66.66%;
+    }
+
+    .span_7_of_12 {
+        width: 58.33%;
+    }
+
+    .span_6_of_12 {
+        width: 50%;
+    }
+
+    .span_5_of_12 {
+        width: 41.66%;
+    }
+
+    .span_4_of_12 {
+        width: 33.33%;
+    }
+
+    .span_3_of_12 {
+        width: 25%;
+    }
+
+    .span_2_of_12 {
+        width: 16.66%;
+    }
+
+    .span_1_of_12 {
+        width: 8.333%;
+    }
+
+    @media only screen and (max-width: 1100px) {
+
+        .span_1_of_8,
+        .span_2_of_8,
+        .span_3_of_8,
+        .span_4_of_8,
+        .span_5_of_8,
+        .span_6_of_8,
+        .span_7_of_8,
+        .span_8_of_8 {
+            width: 100%;
+        }
+
+        .span_1_of_12,
+        .span_2_of_12,
+        .span_3_of_12,
+        .span_4_of_12,
+        .span_5_of_12,
+        .span_6_of_12,
+        .span_7_of_12,
+        .span_8_of_12,
+        .span_9_of_12,
+        .span_10_of_12,
+        .span_11_of_12,
+        .span_12_of_12 {
+            width: 100%;
+        }
+
+    }
+
+    @media only screen and (max-width: 1100px) {
+        .btnsMods {
+            height: 400px !important;
+        }
+
+        div.col div.bntMenu {
+            display: block;
+        }
+    }
+
+
+    @media only screen and (max-width: 1100px) {
+        .btnsMods {
+            z-index: 900;
+            background-color: #f0f8ff;
+            position: absolute;
+            height: 100%;
+            padding: 30px;
+            right: -350px;
+        }
+    }
+</style>`;
+}
+
+/**
+ * funcion que permite toma el 100% del ancho.
+ */
+function ifPageFull() {
+    try {
+        if (/\/pages\//.test(window.location.href)) {
+            wrapperFull();
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+}
+
+/**
+ * funcion pagina url a cargar con el modal
+ */
+$(document).on('click', '.toModal,.tinyModalOpen', function (event) {
+    try {
+        const href = $(this).attr('href');
+        const $this = $(this);
+        const $topMenuInserted = $this.parents(".topMenuInserted");
+        /**
+         * variable que valida que se encuentre el menu superior en el aula.
+         */
+        let ifr = createIframeJquery(href);
+        /** se muestra el icono de full screen */
+        $("#full").fadeIn();
+        var state = false;
+        /** se valida que este en una pagina */
+        if (inCourse() != null) {
+            event.preventDefault();
+            /** se muestra el loader  */
+            $('.secondWhite').fadeIn();
+            openModal();
+            /* se agrega el iframe al popup */
+            $('.thirdWhite').html(ifr);
+        }
+    } catch (error) {
+        doCatch(error);
+    }
+});
+
+/**
+ * esta funcion es del aula principal de canvas.
+ */
+$(document).on('click', '.bntMenu,.btnsMods', function (e) {
+    const $this_ = $(this);
+    var state = $('.btnsMods')
+        .css('right')
+        .replace(/\px/g, '');
+    if (state < 0) {
+        $('.btnsMods').animate({
+            right: 0,
+        },
+            350
+        );
+    } else {
+        if ($this_.parents().hasClass('navSub')) {
+            // console.log('#########################--------------------##########################');
+            return false;
+        }
+        $('.btnsMods').animate({
+            right: '-200%',
+        },
+            350
+        );
+    }
+
+});
+/**
+ * menu del aula en responsive
+ */
+$(document).on('click', '.btnsMods .cerrar', function (e) {
+    $('.btnsMods').animate({
+        right: '-200%',
+    },
+        350
+    );
+});
+
+/**
+ * esta funcion es para el modal de componentes
+ */
+$(document).on('click', '.whitex .close,.backdrop', function (e) {
+    e.preventDefault();
+    closeModal();
+    $('body').css('overflow', 'auto');
+    if (previsualice != null && previsualice == true) {
+        saveChanges();
+        previsualice = false;
+    }
+});
+
+/**
+ * menu icono izquierdo del modal.
+ */
+$(document).on('click', `#full,.fullscreenToggle`, function (e) {
+    e.preventDefault();
+    try {
+        var ifr = false;
+        if ($(this).hasClass("fullscreenToggle")) {
+            ifr = true;
+        }
+        let el = document.getElementById('MainPopupIframe');
+        var local = false;
+        if (el == null) {
+            local = true;
+            el = document.getElementById('thirdWhite');
+            /* el_ = $('#thirdWhite');
+            el_.css("overflow", "auto"); */
+        }
+        ofs(el, local, ifr);
+    } catch (error) {
+        doCatch(error);
+    }
+});
+
+function ilumnoCustom() {
+    try {
+        //removeRebuildCourse();
+        removeRebuildCourseTutor();
+        hideMessageToTeacherAssistance();
+        removeInitialPage();
+        error404();
+        hideStudentHelper();
+        $("head").append(modalStyles());
+        $("body").append(modal());
+        ifPageFull();
+        checkIfStudentTitle();
+    } catch (error) {
+        console.log(error);
+    }
+}
+ilumnoCustom();
